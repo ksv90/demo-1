@@ -1,0 +1,44 @@
+{
+  "name": "test",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "main": "./dist/main.js",
+  "files": [
+    "./dist"
+  ],
+  "scripts": {
+    "build": "pkgroll --src ./src/ --dist ./dist/ --minify",
+    "watch": "tsx watch --env-file=.env ./src/main.ts",
+    "start": "node dist/main.js",
+    "preview": "pnpm build && pnpm start",
+    "lint": "eslint --max-warnings 0 .",
+    "format": "prettier --write .",
+    "test": "echo test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "telegraf": "^4.16.3"
+  },
+  "devDependencies": {
+    "@types/node": "20",
+    "@typescript-eslint/eslint-plugin": "^7.17.0",
+    "@typescript-eslint/parser": "^7.17.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "pkgroll": "^2.5.0",
+    "prettier": "^3.3.3",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "packageManager": "pnpm@9.4.0"
+}
